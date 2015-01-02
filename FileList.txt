@@ -1,0 +1,11 @@
+# This must remain before the rest.
+# The number of the left is the opacity of the windows:
+# 0 = fully transparent, 255 = fully opaque.
+DefaultBackgroundImage: images/WarPathDefaultBackground.jpg; 150
+
+# Lists
+
+Fantasy
+- data/testFantasy.txt
+40k
+- data/testSF.txt; images/image.jpg; 130

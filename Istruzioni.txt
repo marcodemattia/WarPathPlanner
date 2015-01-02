@@ -1,0 +1,61 @@
+Per eseguire il programma: doppio click sul file WarPath.exe.
+
+La finestra e' divisa in 4 aree.
+In alto a sinistra c'e' la lista completa da cui scegliere. Le unita' si selezionano con un doppio click del mouse e vengono inserite
+nella lista delle selezioni.
+In sopra alla lista completa c'e' la combo-box per scegliere la lista.
+In basso a sinistra c'e' la finestra delle unita' scelte. PER RIMUOVERE UNA SCELTA: SELEZIONARLA E PREMERE "canc" (il tasto che sta sotto "ins").
+In basso a destra c'e' la finestra delle opzioni, divise in opzioni e opzioni speciali (spegate piu' avanti).
+Le opzioni visualizzate sono sempre quelle dell'unita' selezionata nella finestra in basso a sinistra.
+La finestra in alto a destra contiene eventuali opzioni dotate di opzioni.
+
+Per salvare le scelte andare su File->Salva.
+
+COME AGGIUNGERE NUOVE LISTE:
+Le liste accessibili vengono lette all'avvio dal file FileList.txt, nella stessa cartella dell'eseguibile. Questo file contiene i nomi
+dei file con le liste, che sono nella cartella "data".
+Se si crea un nuovo file di lista lo si deve aggiungere a FileList.txt per poterlo usare.
+I nomi dei file di lista possono vanno raggruppati in tipi, ad esempio:
+Tipo1
+/data/lista1.txt
+/data/lista2.txt
+Tipo2
+/data/lista3.txt
+
+Di seguito sono riportate le istruzioni sul formato dei file di lista. Probabilmente e' sufficiente aprire il file di prova per
+capire come funziona.
+
+I file di lista hanno alcune caratteristiche da rispettare:
+Le unita' vanno specificate nel formato
+ - nome ; numero modelli ; costo in punti ; tipo
+ - nome e' il nome del modello, che comparira' nella prima colonna
+ - numero di modelli accetta i seguenti formati: min-max (due numeri divisi dal trattino), N+ (ad esempio 10+) oppure N (nel caso in cui il
+numero sia fisso).
+ - tipo specifica il tipo dell'unita', ad esempio truppa, ecc... E' il nome che compare accanto alle righe.
+Il separatore e' il ";".
+Per le opzioni si usa la stessa struttura, ma la riga deve iniziare con un "-", ad esempio:
+- nome ; 1 ; punti ; tipo
+Il numero di modelli e' sempre 1.
+Il tipo si puo' lasciare vuoto, nel qual caso il default e' "Options". Si puo' aggiungere un quinto campo con il testo "xModel" (senza apici)
+per le opzioni che si pagano per ciascun modello dell'unita'.
+
+Per le opzioni condivise da piu' unita':
+La riga deve iniziare con il simbolo "@" seguito dalla lista (sempre separati da @) dei nomi delle unita' cui e' associata.
+La lista deve essere seguita dal simbolo ":" e poi dal normale testo delle opzioni (senza il - iniziale, sostituito in questo caso proprio
+dai :).
+Il default se non si specifica alcun tipo e' "Special Options".
+
+A partire dalla versione 0.91 si puo' aggiungere un quinto campo alle unita'. Il testo inserito in questo quinto campo viene scritto nella
+lista salvata dopo tutte le opzioni selezionate e preceduto da "Special:". Un esempio e' nella lista testFantasy.
+Da questa versione e' anche possibile modificare i titoli delle due finestre ("Item Selection" e "Selected Item"), il nome "Total" accanto al
+riquadro con il totale e la parola "Special:" sopradetta. Per farlo e' sufficiente cambiarli nel file Localize.txt nella cartella principale.
+
+A partire dalla versione 0.92 si possono avere piu' opzioni con sotto-opzioni in una stessa unita'. Accanto ad esse comparira' un tasto "Show",
+cliccandoci verranno visualizzate nella finestra in alto a destra.
+
+A partire dalla versione 0.93 si puo' impostare una immagine di sfondo. Si possono impostare immagini diverse per ogni lista e una immagine di
+default. Le impostazioni sono in FileLists.txt dove e' anche possibile specificare la trasparenza delle finestre. Vedi quel file per istruzioni
+piu' dettagliate.
+L'immagine viene ripetuta quando e' piu' piccola della finestra. Per questo e' conveniente usare immagini abbastanza grandi da riempirla
+completamente, come i wallpapers.
+
